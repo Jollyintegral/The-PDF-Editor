@@ -31,3 +31,6 @@ Your files never leave your computer. There is no server, no tracking, no networ
 ## License
 
 Source-available freeware — free to use, and the code is visible so anyone can check it's clean. All rights stay with the author, see `LICENSE`.
+
+## Contact
+liamnova9@gmail.com for any issues, feature requests, etc.
