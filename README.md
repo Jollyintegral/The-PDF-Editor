@@ -3,6 +3,7 @@
 Simple, lightweight, completely free PDF editor. No accounts, no uploads, no bullshit — everything runs 100% locally in your browser.
 
 ## Free forever
+its free
 
 ## Use it
 
