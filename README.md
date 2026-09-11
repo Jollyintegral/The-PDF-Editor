@@ -34,3 +34,6 @@ Source-available freeware — free to use, and the code is visible so anyone can
 
 ## Contact
 liamnova9@gmail.com for any issues, feature requests, etc.
+
+## Important
+Mobile support coming soon.
