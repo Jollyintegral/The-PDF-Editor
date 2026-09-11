@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The-PDF-Editor — local, free, no bullshit</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;600&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+</head>
+<body>
+<header>
+  <button id="libBtn" title="Back to library">☰</button>
+  <strong>The-PDF-Editor</strong>
+  <span id="docName" class="muted"></span>
+  <span class="spacer"></span>
+  <button id="openBtn" title="Open PDF">Open</button>
+  <button id="undoBtn" title="Undo (Ctrl+Z)" disabled>↶</button>
+  <button id="redoBtn" title="Redo (Ctrl+Shift+Z)" disabled>↷</button>
+  <button id="zoomOut" title="Zoom out">−</button>
+  <span id="zoomLabel">150%</span>
+  <button id="zoomIn" title="Zoom in">+</button>
+  <button id="saveBtn" class="primary" title="Save edited PDF (Ctrl+S)" disabled>Save</button>
+  <input type="file" id="fileInput" accept="application/pdf" hidden>
+</header>
+
+<div id="formatbar" hidden>
+  <button id="addBtn" title="Add text box (or double-click the page)">+ Text</button>
+  <select id="fontSel" title="Font family"></select>
+  <button id="smallerBtn" title="Smaller">A−</button>
+  <input id="sizeInput" type="number" min="5" max="120" value="12" title="Font size">
+  <button id="biggerBtn" title="Bigger">A+</button>
+  <button id="boldBtn" title="Bold (Ctrl+B)"><b>B</b></button>
+  <button id="italicBtn" title="Italic (Ctrl+I)"><i>I</i></button>
+  <button id="ulBtn" title="Underline"><u>U</u></button>
+  <input type="color" id="colorPick" title="Text color" value="#000000">
+  <input type="color" id="hlPick" title="Highlight selected text" value="#ffff00">
+  <button id="clearBtn" title="Reset selected box to original">Clear</button>
+  <button id="delBtn" title="Delete selected">⌫</button>
+  <span class="spacer"></span>
+  <span id="pageCount" class="muted"></span>
+</div>
+
+<main id="viewer">
+  <div id="home">
+    <div class="hero">
+      <h1>The-PDF-Editor</h1>
+      <p class="muted">Simple, lightweight, and free. 100% local.</p>
+      <p><button id="homeOpen" class="primary big">Open a PDF</button></p>
+      <p class="muted small">Click any text to edit it in place — fonts, colors and layout stay put.<br>
+      Select text normally inside a box; grab its edges to move it, or nudge with arrow keys.<br>
+      Double-click empty space to add text. Ctrl+Z to undo, Ctrl+S to save.<br>
+      Work autosaves to this browser.</p>
+    </div>
+    <div id="recentWrap" hidden>
+      <h2>Recent documents</h2>
+      <div id="recent"></div>
+    </div>
+    <footer>Completely free · source visible for transparency</footer>
+  </div>
+  <div id="pages"></div>
+</main>
+
+<div id="status"></div>
+
+<script src="vendor/pdf.min.js"></script>
+<script src="vendor/pdf-lib.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
